@@ -2,17 +2,17 @@ import * as actionTypes from '../actions/actionTypes';
 
 
 const initialState = {
-    receivedPage: false
+    todoItems: [ { } ]
 }
 
 
 const Reducer = ( state = initialState, action ) => {
     switch( action.type ){
-        case( actionTypes.One ):
+        case( actionTypes.addTodo ):
         {
             return {
                 ...state,
-                receivedPage: !state.receivedPage
+                todoItems: [ ...todoItems, action.data ]
             }
         }
 

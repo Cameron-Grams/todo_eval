@@ -1,1 +1,1 @@
-export const One = "First_PlaceHolder"; 
+export const addTodo = "ADD_TODO"; 
