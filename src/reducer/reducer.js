@@ -3,8 +3,9 @@ import * as actionTypes from '../actions/actionTypes';
 
 const initialState = {
     errorMessage: false, 
-    todoItems: [ { } ],
-    rank: 0
+    todoItems: [],
+    rank: 0,
+    todoId: 1
 }
 
 
@@ -13,7 +14,8 @@ const Reducer = ( state = initialState, action ) => {
         case( actionTypes.addTodo ):
             let newTodo = {
                 rank: state.rank + 1,
-                text: action.data.textTodoInput
+                text: action.data.textTodoInput,
+                todoId: state.todoId + 1
             }       
             return {
                 ...state,

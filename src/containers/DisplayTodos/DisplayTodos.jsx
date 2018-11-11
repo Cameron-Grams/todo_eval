@@ -3,18 +3,26 @@ import { connect } from 'react-redux';
 import SingleTodo from '../../components/SingleTodo'; 
 
 class DisplayTodos extends React.Component{
+    constructor( props ){
+        super( props );
+        this.updateTodo = this.updateTodo.bind( this );
+    }
+
+    updateTodo( item ){
+        return;
+    }
     
     render(){
 
         const todoDisplay = this.props.todoItems.map( ( item, index ) => {
            return( 
-               <SingleTodo key={ index } text={ item.text } />
+               <SingleTodo key={ index } editTodo={ this.updateTodo( item ) } text={ item.text } />
            )
         })
 
 
         return(
-            <p>{ todoDisplay }</p> 
+            <div>{ todoDisplay }</div>
         ) 
     }
 }
