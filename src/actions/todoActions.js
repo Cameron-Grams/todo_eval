@@ -18,3 +18,9 @@ export function improperInput(){
     }
 }
 
+export function updateTodo( item ){
+    return{
+        type: actionTypes.performUpdate,
+        data: item
+    }
+}

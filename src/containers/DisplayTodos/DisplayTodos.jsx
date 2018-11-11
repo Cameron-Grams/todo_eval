@@ -9,7 +9,7 @@ class DisplayTodos extends React.Component{
     }
 
     updateTodo( item ){
-        return;
+        return this.updateTodo( item );
     }
     
     render(){
