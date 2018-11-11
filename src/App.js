@@ -1,28 +1,37 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import { connect } from 'react-redux'; 
+import { respond } from './actions/timerActions'; 
 import './App.css';
 
 class App extends Component {
+  constructor( props ){
+    super( props );
+    this.sendResponse = this.sendResponse.bind( this );
+  }
+
+  sendResponse(){
+     return this.props.respond(); 
+  }
+
   render() {
+
+
+
+
     return (
+
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
+           <p>Insider the App</p>     
+           <button onClick={ () => this.sendResponse() } >Test Button</button>
         </header>
       </div>
     );
   }
 }
 
-export default App;
+const mapStateToProps = ( state ) => ( {
+    ...state
+})
+
+export default connect( mapStateToProps, { respond } )( App );
