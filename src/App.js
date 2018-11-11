@@ -3,6 +3,8 @@ import { connect } from 'react-redux';
 import { respond } from './actions/timerActions'; 
 import './App.css';
 
+import DisplayTodos from './containers/DisplayTodos'; 
+
 class App extends Component {
   constructor( props ){
     super( props );
@@ -22,8 +24,7 @@ class App extends Component {
 
       <div className="App">
         <header className="App-header">
-           <p>Insider the App</p>     
-           <button onClick={ () => this.sendResponse() } >Test Button</button>
+           < DisplayTodos  /> 
         </header>
       </div>
     );
