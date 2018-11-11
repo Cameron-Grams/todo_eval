@@ -19,6 +19,9 @@ export function improperInput(){
 }
 
 export function updateTodo( item ){
+    // here would push to the history of a new component that could update the todo
+
+
     return{
         type: actionTypes.performUpdate,
         data: item

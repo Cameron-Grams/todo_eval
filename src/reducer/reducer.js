@@ -28,6 +28,13 @@ const Reducer = ( state = initialState, action ) => {
                 errorMessage: !state.errorMessage
             }
 
+        case( actionTypes.performUpdate ): 
+
+// this would have to be managed through the other component
+
+            return {
+                ...state
+            }
  
         default: {
             return {

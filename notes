@@ -1,0 +1,11 @@
+
+
+todo objects are built
+
+App component handles the display
+
+editing would take place on another component
+
+return to App and re-render with the updated object
+
+
